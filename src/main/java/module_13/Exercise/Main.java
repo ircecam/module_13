@@ -43,5 +43,6 @@ public class Main {
         HttpUtil.getInfoUser(URI);
         HttpUtil.getUserByName("Bret",URI);
         HttpUtil.getComments(1,URI);
+        HttpUtil.getOpenTasks(URI,1);
     }
 }
