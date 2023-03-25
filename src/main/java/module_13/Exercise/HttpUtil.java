@@ -116,7 +116,7 @@ public class HttpUtil {
         setToFile(response(requestGET(formattedLink1)).body(),userId,maxId);
     }
 
-    public  static boolean setToFile(String text, int userId, int maxId){
+    private  static boolean setToFile(String text, int userId, int maxId){
         String formattedLink = MessageFormat.format("user-%d-post-%d-comments.json",userId,maxId);
         try(OutputStream fos = new FileOutputStream(formattedLink)){
             fos.write(text.getBytes(StandardCharsets.UTF_8));
